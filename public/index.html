@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Test</title>
 
     <script data-dojo-config="async: 1,
         packages: [ {
             name: 'local',
-            location: location.pathname.replace(/\/[^/]+$/, '') + '/js/'
-        } ]"
-        src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+            location: location.pathname.replace(/\/[^/]+$/, '') + '../js/'
+        } ]" src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
 
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script type="text/javascript">
-
-      require(["local/social"], function(Social){
-        var social = new Social("bitchBoi");
-      });
-
+        require(["local/social"], function(Social) {
+            var social = new Social("bitchBoi", 'https://www.facebook.com/pages/Backus-Woods/266385630237829');
+        });
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <h1>Tom</h1>
     <div id="tweet"></div>
+    <div id="fb-root"></div>
 
-  </body>
+</body>
+
 </html>
